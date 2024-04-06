@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper and Scissors Game</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script src="playgame.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="heading1">ROCK PAPER AND SCISSORS</h1>
+        </nav>
+    </header>
+    <div class="part">
+        <div class="user">
+            <h2 class="heading2">YOU</h2>
+            <div class="buttons">
+                <button id="rockUserbtn" class="rock">Rock</button>
+                <button id="paperUserbtn" class="paper">Paper</button>
+                <button id="scissorsUserbtn" class="scissors">Scissors</button>
+            </div>
+            <div class="img">
+                <img id="rockUserImage" src="Assets/rock.png" alt="Rock">
+                <img id="paperUserImage" src="Assets/paper.png" alt="Paper">
+                <img id="scissorsUserImage" src="Assets/scissor.png" alt="Scissors">
+            </div>
+        </div>
+        <div class="bot">
+            <h2 class="heading2">BOT</h2>
+            <div class="buttons">
+                <button id="rockBotbtn" class="rockBot" disabled>Rock</button>
+                <button id="paperBotbtn" class="paperBot" disabled>Paper</button>
+                <button id="scissorsBotbtn" class="scissorsBot" disabled>Scissors</button>
+            </div>
+            <div class="img">
+                <img id="rockBotImage" src="Assets/rock.png" alt="Rock">
+                <img id="paperBotImage" src="Assets/paper.png" alt="Paper">
+                <img id="scissorsBotImage" src="Assets/scissor.png" alt="Scissors">
+            </div>
+        </div>
+    </div>
+    <div class="parent">
+        <div id="scorecard" class="scorecard">
+            <div class="score">
+                <p id="you">0</p>
+                <p class="name">You</p>
+            </div>
+            <div class="score">
+                <p id="tie">0</p>
+                <p class="name">Tie</p>
+            </div>
+            <div class="score">
+                <p id="bot">0</p>
+                <p class="name">Bot</p>
+            </div>
+        </div>
+    </div>
+    <p id="resultText">Result</p>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body{
+    background-image: url(Assets/bgimage8.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.heading1{
+    color: beige;
+    text-shadow: 0px 0px 8px rgb(182, 180, 180);
+    font-size: 40px;
+}
+.part{
+    display: flex;
+    justify-content: center;
+}
+.heading2{
+    color: beige;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0px 0px 8px rgb(182, 180, 180);
+    text-decoration: underline;
+}
+.user, .bot{
+    margin-top: 20px;
+    width: 50%;
+    /* border: 1px solid black; */
+    /* background-color: aqua; */
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.rock, .paper, .scissors{
+    margin: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: medium;
+    border: none;
+}
+.rockBot, .paperBot, .scissorsBot{
+    margin: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: medium;
+    border: none;
+    cursor: not-allowed;
+}
+.rock:hover {
+    background-color: rgb(209, 209, 209);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.paper:hover {
+    background-color: rgb(209, 209, 209);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.scissors:hover {
+    background-color: rgb(209, 209, 209);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.part .user img{
+    width: 100px;
+    display: none;
+}
+.part .user .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.part .bot img{
+    width: 100px;
+    display: none;
+}
+.part .bot .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.parent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.scorecard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 5px;
+    color: beige;
+    text-shadow: 0px 0px 8px rgb(182, 180, 180);
+}
+.scorecard .score {
+    text-align: center;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+.scorecard .score .name{
+    margin-top: -20px;
+}
+.scorecard .score #you, .scorecard .score #bot, .scorecard .score #tie{
+    font-size: 45px;
+}
+#resultText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    color: beige;
+    text-shadow: 0px 0px 8px rgb(182, 180, 180);
+}
