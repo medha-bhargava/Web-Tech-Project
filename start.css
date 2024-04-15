@@ -1,5 +1,5 @@
 body{
-    background-image: url(Assets/bgimage8.jpeg);
+    background-image: url(Assets/bgimage.jpeg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -14,41 +14,29 @@ body{
     font-size: 40px;
 }
 .playbox{
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 20px;
     margin: 100px auto;
-    border: 1px solid rgb(116, 113, 113);
-    background-color: rgba(255, 255, 255, 0);
     border-radius: 15px;
     max-width: 350px;
-    background: rgba(255, 255, 255, 0.339);
-    box-shadow: 0px 0px 20px 12px rgba(137, 142, 212, 0);
-    backdrop-filter: blur(3px);
-    font-size: 20px;
-    color: beige;
 }
-.playbox input{
-    margin-left: 100px;
-    margin-top: 9px;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
+.btns{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
-.btn{
-    margin: 15px auto;
-    margin-bottom: -5px;
-    border-radius: 20px;
-    padding: 5px;
+.playGame, .showHistory{
+    border-radius: 35px;
+    padding: 15px;
+    margin: 15px;
     border: none;
     width: 100%;
     font-size: medium;
     color: rgb(36, 87, 217);
 }
-.btn:hover{
+.playGame a, .showHistory a{
+    text-decoration: none;
+    color: rgb(36, 87, 217);
+}
+.playGame:hover, .showHistory:hover{
     cursor: pointer;
     background-color: rgb(194, 225, 246);
     color: rgb(10, 136, 214);

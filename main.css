@@ -1,5 +1,5 @@
 body{
-    background-image: url(Assets/bgimage8.jpeg);
+    background-image: url(Assets/bgimage.jpeg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -27,8 +27,6 @@ body{
 .user, .bot{
     margin-top: 20px;
     width: 50%;
-    /* border: 1px solid black; */
-    /* background-color: aqua; */
 }
 .buttons{
     display: flex;
@@ -50,39 +48,17 @@ body{
     border: none;
     cursor: not-allowed;
 }
-.rock:hover {
+.rock:hover, .paper:hover, .scissors:hover{
     background-color: rgb(209, 209, 209);
     color: black;
     cursor: pointer;
     transition: 0.3s;
 }
-.paper:hover {
-    background-color: rgb(209, 209, 209);
-    color: black;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.scissors:hover {
-    background-color: rgb(209, 209, 209);
-    color: black;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.part .user img{
+.part .user img, .part .bot img{
     width: 100px;
     display: none;
 }
-.part .user .img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-}
-.part .bot img{
-    width: 100px;
-    display: none;
-}
-.part .bot .img{
+.part .user .img, .part .bot .img{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,4 +97,33 @@ body{
     font-size: x-large;
     color: beige;
     text-shadow: 0px 0px 8px rgb(182, 180, 180);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.exitGameButton{
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: larger;
+    font-weight: 520;
+    cursor: pointer;
+}
+.exitGameButton:hover{
+    background-color: rgb(209, 209, 209);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#linkBack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+#linkBack a{
+    font-size: larger;
 }

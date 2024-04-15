@@ -1,14 +1,16 @@
 <?php
-function logResult($userScore, $botScore, $iterations) {
+header('Access-Control-Allow-Origin: *');
+function logResult($userScore, $botScore, $tieScore) {
   $hostname = "localhost";
-  $username = "your_username";
-  $password = "your_password";
-  $database = "your_database";
+  $username = "root";
+  $database = "WebTech";
+  $password = "";
   $conn = mysqli_connect($hostname, $username, $password, $database);
   if (!$conn) {
+    echo "Connection failed";
     die("Connection failed: " . mysqli_connect_error());
   }
-  $sql = "INSERT INTO game_results (user_score, bot_score, iterations) VALUES ($userScore, $botScore, $iterations)";
+  $sql = "INSERT INTO game_results (user_score, bot_score, tie_score) VALUES ($userScore, $botScore, $tieScore)";
   if (mysqli_query($conn, $sql)) {
     echo "Result logged successfully";
   } else {
@@ -16,8 +18,9 @@ function logResult($userScore, $botScore, $iterations) {
   }
   mysqli_close($conn);
 }
-$userScore = $_POST["userScore"];
-$botScore = $_POST["botScore"];
-$iterations = $_POST["iterations"];
-logResult($userScore, $botScore, $iterations);
+parse_str($_SERVER["QUERY_STRING"], $queryParams);
+$userScore = isset($queryParams["userScore"]) ? $queryParams["userScore"] : null;
+$botScore = isset($queryParams["botScore"]) ? $queryParams["botScore"] : null;
+$tieScore = isset($queryParams["tieScore"]) ? $queryParams["tieScore"] : null;
+logResult($userScore, $botScore, $tieScore);
 ?>
